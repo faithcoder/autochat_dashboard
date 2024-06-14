@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.css">
 </head>
-<body>
-    <div class="main-wrapper">
+<body id="theme-area">
+    <div class="main-wrapper" >
         <h3 class="border-bottom section-padding">Settings</h3>
         <div class="flex-layout primary-bg">
             <div class="autochat">
@@ -122,43 +123,46 @@
                     <textarea name="" id="" placeholder="placeholder text"></textarea>
                 </div>
             </div>
-            <div class="ac-theme-area">
+            <div class="ac-theme-area light-theme">
                 <div class="flex-layout">
                     <div class="theme">
                         <h4>Theme</h4>
                     </div>
                     <div class="input-area">
-                    <div class="select-box">
-                        <select name="" id="">
-                            <option value="">Light</option>
-                            <option value="">Dark</option>
-                        </select>
-                    </div>
-                    
+                        <div class="select-box">
+                            <select id="theme-selector">
+                                <option value="light">Light</option>
+                                <option value="dark">Dark</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-            </div>  
+            </div> 
             <div class="colors-area">
                 <h4>Colors</h4>
                 <div class="flex-layout">
                     <div class="single-color">
                         <p>Brand Color</p>
-                        <input type="color">
+                        <input id="ac-brand-color-picker" value='#276cb8' />
                     </div>
                     <div class="single-color">
                         <p>Secondary Color</p>
-                        <input type="color">
+                        <input id="ac-secondary-color-picker" value='#276cb8' />
                     </div>
                     <div class="single-color">
                         <p>Text Color</p>
-                        <input type="color">
+                        <input id="ac-text-color-picker" value='#276cb8' />
                     </div>
                 </div>
             </div>
         </div>
 
     </div>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="autochat-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/spectrum-colorpicker2/dist/spectrum.min.js">
+   
 </body>
 </html>

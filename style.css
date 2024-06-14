@@ -239,4 +239,13 @@ select{
     position: relative;
     top: 3px;
   }
-  
+
+  #ac-brand-color-picker,
+  #ac-secondary-color-picker, 
+  #ac-text-color-picker {
+    border: 1px solid var(--border-color);
+    padding: 5px 5px;
+    background: transparent;
+    border-radius: 5px;
+    border-left: none;
+  }
