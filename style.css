@@ -231,3 +231,12 @@ select{
   .slider.round:before {
     border-radius: 50%;
   }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #fff;
+    position: relative;
+    top: 3px;
+  }
+  
