@@ -249,3 +249,19 @@ select{
     border-radius: 5px;
     border-left: none;
   }
+
+  /* RESPONSIVE CODE  */
+
+@media screen and (max-width: 768px) {
+  .input-area{
+    flex-basis: 100%;
+  }
+    .file-type-layout {
+      justify-content: start;
+      margin-top: 10px;
+  }
+  .switch {
+    float: left;
+    margin-top: 5px;
+  }
+}
