@@ -93,6 +93,36 @@ textarea{
     margin: 10px 0;
 }
 
+label > img.upload-image {
+  border-radius: 50px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+}
+.file-type-layout{
+  display: flex;
+  justify-content:end;
+  align-items: center;
+  gap: 12px;
+}
+button.remove-button{
+  cursor: pointer;
+  position: relative;
+  padding: 15px 40px 15px 24px;
+  font-size: 16px;
+    border: 1px solid rgba(192, 197, 204, 1);
+    border-radius: 10px;
+    background: transparent;
+    font-weight: 600;
+    line-height: 16px;
+    margin-top: -10px;
+}
+span.remove-icon img{
+  position: absolute;
+    top: 10px;
+    right: 7px;
+}
+
 /* SECTION STYLES */
 .brand-icon label{
 
