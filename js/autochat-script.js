@@ -43,15 +43,6 @@ $(document).ready(function() {
         $('.upload-image').attr('src', defaultImageSrc);
     });
 
-    // $('#theme-selector').change(function() {
-    //     var selectedTheme = $(this).val();
-    //     if (selectedTheme === 'light') {
-    //         $('#theme-area').removeClass('dark-theme').addClass('light-theme');
-    //     } else if (selectedTheme === 'dark') {
-    //         $('#theme-area').removeClass('light-theme').addClass('dark-theme');
-    //     }
-    // });
-
     $('#ac-brand-color-picker').spectrum({
         type: "component",
         showPalette: false
