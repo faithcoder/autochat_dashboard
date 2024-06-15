@@ -116,6 +116,11 @@ button.remove-button{
     font-weight: 600;
     line-height: 16px;
     margin-top: -10px;
+    transition: all 0.5s;
+}
+button.remove-button:hover {
+  background: #fff;
+  border: 1px solid #fff;
 }
 span.remove-icon img{
   position: absolute;
