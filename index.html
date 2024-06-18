@@ -6,7 +6,6 @@
     <title>Document</title>
 
     <link rel="stylesheet" type="text/css" href="css/spectrum.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -75,6 +74,7 @@
                     <div class="input-area">
                         <div class="select-box">
                             <select name="bubbleType" id="bubbleType">
+                                <option value="">Select an option</option>
                                 <option value="text_icon">Text & Icon</option>
                                 <option value="text">Text</option>
                                 <option value="icon">Icon</option>
@@ -91,14 +91,56 @@
                 <div class="flex-layout basic-margin" id="bubbleIconArea">
                     <p>Bubble icon</p>
                     <div class="input-area">
-                        <div class="select-box">
-                            <select id="icon-selector">
-                                <option value="chat-icon-1" data-icon="img/chat-icon-1.png"></option>
-                                <option value="chat-icon-2" data-icon="img/chat-icon-2.png"></option>
-                                <option value="chat-icon-3" data-icon="img/chat-icon-3.png"></option>
-                                <option value="chat-icon-4" data-icon="img/chat-icon-4.png"></option>
-                                <option value="chat-icon-5" data-icon="img/chat-icon-5.png"></option>
-                            </select>
+                        <div class="ac-icon-select-box" id="icon-selector">
+                            <div class="selected">
+                                
+                                <span>Select an icon</span>
+                            </div>
+                            <div class="options">
+                                <div data-value="chat-icon-1" data-icon="img/chat-icon-1.png">
+                                    <img src="img/chat-icon-1.png" alt="Chat Icon 1"> 
+                                </div>
+                                <div data-value="chat-icon-2" data-icon="img/chat-icon-2.png">
+                                    <img src="img/chat-icon-2.png" alt="Chat Icon 2"> 
+                                </div>
+                                <div data-value="chat-icon-3" data-icon="img/chat-icon-3.png">
+                                    <img src="img/chat-icon-3.png" alt="Chat Icon 3"> 
+                                </div>
+                                <div data-value="chat-icon-4" data-icon="img/chat-icon-4.png">
+                                    <img src="img/chat-icon-4.png" alt="Chat Icon 4"> 
+                                </div>
+                                <div data-value="chat-icon-5" data-icon="img/chat-icon-5.png">
+                                    <img src="img/chat-icon-5.png" alt="Chat Icon 5"> 
+                                </div>
+                                <div data-value="chat-icon-6" data-icon="img/chat-icon-6.png">
+                                    <img src="img/chat-icon-6.png" alt="Chat Icon 6"> 
+                                </div>
+                                <div data-value="chat-icon-7" data-icon="img/chat-icon-7.png">
+                                    <img src="img/chat-icon-7.png" alt="Chat Icon 7"> 
+                                </div>
+                                <div data-value="chat-icon-8" data-icon="img/chat-icon-8.png">
+                                    <img src="img/chat-icon-8.png" alt="Chat Icon 8"> 
+                                </div>
+                                <div data-value="chat-icon-9" data-icon="img/chat-icon-9.png">
+                                    <img src="img/chat-icon-9.png" alt="Chat Icon 9"> 
+                                </div>
+                                <div data-value="chat-icon-10" data-icon="img/chat-icon-10.png">
+                                    <img src="img/chat-icon-10.png" alt="Chat Icon 10"> 
+                                </div>
+                                <div data-value="chat-icon-11" data-icon="img/chat-icon-11.png">
+                                    <img src="img/chat-icon-11.png" alt="Chat Icon 11"> 
+                                </div>
+                                <div data-value="chat-icon-12" data-icon="img/chat-icon-12.png">
+                                    <img src="img/chat-icon-12.png" alt="Chat Icon 12"> 
+                                </div>
+                                <div data-value="chat-icon-13" data-icon="img/chat-icon-13.png">
+                                    <img src="img/chat-icon-13.png" alt="Chat Icon 13"> 
+                                </div>
+                                <div data-value="chat-icon-14" data-icon="img/chat-icon-14.png">
+                                    <img src="img/chat-icon-14.png" alt="Chat Icon 14"> 
+                                </div>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -179,17 +221,43 @@
             </div>
         </div>
     </div> -->
+
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectBox = document.getElementById('icon-selector');
+            const selected = selectBox.querySelector('.selected');
+            const optionsContainer = selectBox.querySelector('.options');
+            const optionsList = optionsContainer.querySelectorAll('div');
+
+            selected.addEventListener('click', function() {
+                optionsContainer.style.display = optionsContainer.style.display === 'none' ? 'block' : 'none';
+            });
+
+            optionsList.forEach(option => {
+                option.addEventListener('click', function() {
+                    const icon = option.getAttribute('data-icon');
+                    const value = option.getAttribute('data-value');
+                    const text = option.textContent.trim();
+
+                    selected.innerHTML = `<img src="${icon}" alt="${text}"><span>${text}</span>`;
+                    optionsContainer.style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!selectBox.contains(event.target)) {
+                    optionsContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/autochat-script.js"></script>
-    <script src="js/select2.min.js"></script>
+  
     <script src="js/spectrum.min.js">
-    
-
-
-
 
    
 </body>

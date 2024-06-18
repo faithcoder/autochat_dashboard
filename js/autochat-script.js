@@ -69,34 +69,7 @@ $(document).ready(function() {
         showPalette: false
       });
 
-
-    //   custom select option
-
-    function formatOption(option) {
-        if (!option.id) {
-            return option.text;
-        }
-        var $option = $(
-            '<span><img src="' + $(option.element).data('icon') + '" class="icon-image" /> ' + option.text + '</span>'
-        );
-        return $option;
-    }
-
-    $('#icon-selector').select2({
-        templateResult: formatOption,
-        templateSelection: formatOption,
-        minimumResultsForSearch: -1 // Hide the search box
-    });
-
-    // // Handle theme change
-    // $('#icon-selector').change(function() {
-    //     var selectedTheme = $(this).val();
-    //     // if (selectedTheme === 'light') {
-    //     //     $('#bubbleIconArea').removeClass('dark-theme').addClass('light-theme');
-    //     // } else if (selectedTheme === 'dark') {
-    //     //     $('#bubbleIconArea').removeClass('light-theme').addClass('dark-theme');
-    //     // }
-    // });
+    
 
 });
 

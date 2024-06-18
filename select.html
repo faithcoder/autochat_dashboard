@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Icon Selector</title>
+    <style>
+        .select-box {
+            position: relative;
+            width: 200px;
+        }
+
+        .select-box select {
+            display: none; /* Hide the default select element */
+        }
+
+        .select-box .selected {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+
+        .select-box .selected img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .select-box .options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            z-index: 10;
+        }
+
+        .select-box .options div {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .select-box .options div:hover {
+            background-color: #f0f0f0;
+        }
+
+        .select-box .options div img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="select-box" id="icon-selector">
+        <div class="selected">
+            <img src="img/chat-icon-1.png" alt="Selected Icon">
+            <span>Select an icon</span>
+        </div>
+        <div class="options">
+            <div data-value="chat-icon-1" data-icon="img/chat-icon-1.png">
+                <img src="img/chat-icon-1.png" alt="Chat Icon 1"> 
+            </div>
+            <div data-value="chat-icon-2" data-icon="img/chat-icon-2.png">
+                <img src="img/chat-icon-2.png" alt="Chat Icon 2"> 
+            </div>
+            <div data-value="chat-icon-3" data-icon="img/chat-icon-3.png">
+                <img src="img/chat-icon-3.png" alt="Chat Icon 3"> 
+            </div>
+            <div data-value="chat-icon-4" data-icon="img/chat-icon-4.png">
+                <img src="img/chat-icon-4.png" alt="Chat Icon 4"> 
+            </div>
+            <div data-value="chat-icon-5" data-icon="img/chat-icon-5.png">
+                <img src="img/chat-icon-5.png" alt="Chat Icon 5"> 
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectBox = document.getElementById('icon-selector');
+            const selected = selectBox.querySelector('.selected');
+            const optionsContainer = selectBox.querySelector('.options');
+            const optionsList = optionsContainer.querySelectorAll('div');
+
+            selected.addEventListener('click', function() {
+                optionsContainer.style.display = optionsContainer.style.display === 'none' ? 'block' : 'none';
+            });
+
+            optionsList.forEach(option => {
+                option.addEventListener('click', function() {
+                    const icon = option.getAttribute('data-icon');
+                    const value = option.getAttribute('data-value');
+                    const text = option.textContent.trim();
+
+                    selected.innerHTML = `<img src="${icon}" alt="${text}"><span>${text}</span>`;
+                    optionsContainer.style.display = 'none';
+                });
+            });
+
+            document.addEventListener('click', function(event) {
+                if (!selectBox.contains(event.target)) {
+                    optionsContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
