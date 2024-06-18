@@ -88,6 +88,16 @@ $(document).ready(function() {
         minimumResultsForSearch: -1 // Hide the search box
     });
 
+    // // Handle theme change
+    // $('#icon-selector').change(function() {
+    //     var selectedTheme = $(this).val();
+    //     // if (selectedTheme === 'light') {
+    //     //     $('#bubbleIconArea').removeClass('dark-theme').addClass('light-theme');
+    //     // } else if (selectedTheme === 'dark') {
+    //     //     $('#bubbleIconArea').removeClass('light-theme').addClass('dark-theme');
+    //     // }
+    // });
+
 });
 
 
