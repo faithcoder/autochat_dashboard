@@ -270,3 +270,45 @@ select{
     margin-top: 5px;
   }
 }
+
+.select2-container .icon-image {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+  display: flex;
+  align-items: center;
+}
+.select2-container .select2-selection--single .select2-selection__rendered .icon-image {
+  margin-right: 10px;
+}
+
+.select2-container {
+  display: block;
+}
+
+.select2-container--default .select2-selection--single{
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  outline: none;
+  color: rgba(0, 0, 0, 0.8);
+  height: 36px;
+  width: 100%;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #444;
+  line-height: 34px;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.select2-results__options {
+  font-size: 12px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  display: none;
+}

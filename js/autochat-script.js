@@ -69,6 +69,29 @@ $(document).ready(function() {
         showPalette: false
       });
 
+
+    //   custom select option
+
+    function formatOption(option) {
+        if (!option.id) {
+            return option.text;
+        }
+        var $option = $(
+            '<span><img src="' + $(option.element).data('icon') + '" class="icon-image" /> ' + option.text + '</span>'
+        );
+        return $option;
+    }
+
+    $('#icon-selector').select2({
+        templateResult: formatOption,
+        templateSelection: formatOption,
+        minimumResultsForSearch: -1 // Hide the search box
+    });
+
 });
 
 
+
+
+        
+    

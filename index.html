@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" type="text/css" href="css/spectrum.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-wrapper" >
@@ -90,10 +92,17 @@
                     <p>Bubble icon</p>
                     <div class="input-area">
                         <div class="select-box">
-                            <select name="iconSelect">
-                                <option value="">Select an icon</option>
-                                <option value="icon1">Icon 1</option>
-                                <option value="icon2">Icon 2</option>
+                            <select id="icon-selector">
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="light" data-icon="img/x.png">Light</option>
+                                <option value="dark" data-icon="img/avatar.png">Dark</option>
                             </select>
                         </div>
                     </div>
@@ -160,10 +169,33 @@
 
     </div>
 
+    <!-- <div class="ac-theme-area light-theme" id="theme-area">
+        <div class="flex-layout">
+            <div class="theme">
+                <h4>Theme</h4>
+            </div>
+            <div class="input-area">
+                <div class="select-box">
+                    <select id="theme-selector">
+                        <option value="light" data-icon="img/x.png">Light</option>
+                        <option value="dark" data-icon="img/avatar.png">Dark</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="js/autochat-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script src="js/spectrum.min.js">
+    
+
+
+
+
    
 </body>
 </html>
