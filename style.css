@@ -34,27 +34,27 @@ body{
     padding: 12px 0;
 }
 
-.main-wrapper{
+.ac-main-wrapper{
     width: 80%;
     margin: 0 auto;
     margin-bottom: 50px;
 }
-.main-wrapper h3 {
+.ac-main-wrapper h3 {
   margin-bottom: 20px;
 }
-.flex-layout{
+.ac-main-wrapper .flex-layout{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
 
-h4{
+.ac-main-wrapper h4{
     color: var(--primary-text-color);
     font-size: 18px;
     line-height: 24px;
 }
-p, label{
+.ac-main-wrapper p, .ac-main-wrapper label{
     color: var(--secondary-text-color);
     font-size: 14px;
     line-height: 28px;
@@ -63,7 +63,7 @@ p, label{
 .basic-margin{
   margin: 10px 0;
 }
-input[type=text]{
+.ac-main-wrapper input[type=text]{
     border: 1px solid var(--border-color);
     border-radius: 10px;
     padding: 8px 10px;
@@ -71,41 +71,41 @@ input[type=text]{
     outline: none;
 }
 
-input[type=text]::placeholder{
+.ac-main-wrapper input[type=text]::placeholder{
   color:rgba(0, 0, 0, 0.4);
 }
 
-input[type=text]:focus{
+.ac-main-wrapper input[type=text]:focus{
   border: 1px solid var(--border-color);
 }
 
-.input-area{
+.ac-input-area{
   flex-basis: 30%;
 }
 
-textarea{
+.ac-main-wrapper textarea{
     width: 100%;
     padding: 20px;
     border: var(--border-color);
 }
 
-.widget-text-area{
+.ac-main-wrapper .widget-text-area{
     margin: 10px 0;
 }
 
-label > img.upload-image {
+.ac-main-wrapper label > img.upload-image {
   border-radius: 50px;
   cursor: pointer;
   width: 48px;
   height: 48px;
 }
-.file-type-layout{
+.ac-main-wrapper .file-type-layout{
   display: flex;
   justify-content:end;
   align-items: center;
   gap: 12px;
 }
-button.remove-button{
+.ac-main-wrapper button.remove-button{
   cursor: pointer;
   position: relative;
   padding: 15px 40px 15px 24px;
@@ -118,11 +118,11 @@ button.remove-button{
     margin-top: -10px;
     transition: all 0.5s;
 }
-button.remove-button:hover {
+.ac-main-wrapper button.remove-button:hover {
   background: #fff;
   border: 1px solid #fff;
 }
-span.remove-icon img{
+.ac-main-wrapper span.remove-icon img{
   position: absolute;
     top: 10px;
     right: 10px;
@@ -141,7 +141,7 @@ span.remove-icon img{
 .select-box{
   position: relative;
 }
-select{
+.ac-main-wrapper select{
   width: 100%;
   height: 36px;
   appearance: none;
@@ -152,7 +152,7 @@ select{
   color: rgba(0, 0, 0, 0.8);
 
 }
-.select-box::after{
+.ac-main-wrapper .select-box::after{
   content: '';
   position: absolute;
   z-index: 1;
@@ -168,7 +168,7 @@ select{
 }
 
 /* The switch - the box around the slider */
-.switch {
+.ac-main-wrapper .switch {
     position: relative;
     display: inline-block;
     width: 50px;
@@ -177,14 +177,14 @@ select{
   }
   
   /* Hide default HTML checkbox */
-  .switch input {
+  .ac-main-wrapper .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
   
   /* The slider */
-  .slider {
+  .ac-main-wrapper .slider {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -197,7 +197,7 @@ select{
     border: 1px solid rgba(192, 197, 204, 1);
   }
   
-  .slider:before {
+  .ac-main-wrapper .slider:before {
     position: absolute;
     content: "";
     height: 16px;
@@ -210,34 +210,34 @@ select{
     transition: .4s;
   }
   
-  input:checked + .slider {
+  .ac-main-wrapper input:checked + .slider {
     background-color: #000;
     
   }
-  input:checked + .slider::before {
+  .ac-main-wrapper input:checked + .slider::before {
     background-color: #fff;
   }
   
-  input:focus + .slider {
+  .ac-main-wrapper input:focus + .slider {
     box-shadow: 0 0 1px #fff;
   }
   
-  input:checked + .slider:before {
+  .ac-main-wrapper input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
   
   /* Rounded sliders */
-  .slider.round {
+  .ac-main-wrapper .slider.round {
     border-radius: 34px;
   }
   
-  .slider.round:before {
+  .ac-main-wrapper .slider.round:before {
     border-radius: 50%;
   }
 
-  input[type="checkbox"] {
+  .ac-main-wrapper input[type="checkbox"] {
     width: 16px;
     height: 16px;
     accent-color: #fff;
@@ -258,14 +258,14 @@ select{
   /* RESPONSIVE CODE  */
 
 @media screen and (max-width: 768px) {
-  .input-area{
+  .ac-main-wrapper .ac-input-area{
     flex-basis: 100%;
   }
-    .file-type-layout {
+  .ac-main-wrapper .file-type-layout {
       justify-content: start;
       margin-top: 10px;
   }
-  .switch {
+  .ac-main-wrapper .switch {
     float: left;
     margin-top: 5px;
   }
